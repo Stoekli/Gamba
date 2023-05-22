@@ -10,6 +10,8 @@ chosen_case = "Homeless case"
 with open("cases.json", "r") as f:
     cases = json.load(f)
 
+py.init()
+
 
 def gen_case():
     r = np.random.choice(names, 1, p=odds)[0]
@@ -20,8 +22,8 @@ def gen_case():
 
     return r, d
 
-screen_width = 1200
-screen_height =720
+screen_width = 1280
+screen_height = 720
 
 rec_width = screen_width/2
 rec_height = screen_width/2
@@ -37,9 +39,15 @@ py.display.set_caption('Gamba')
 
 r, d = gen_case()
 
-path = "C:\\Users\\perak\\PycharmProjects\\GambaCase\\images\\"
+path = "./images/"
+
+font = py.font.Font('./font/Roboto-Regular.ttf', 64)
+
 
 while running:
+
+    text = font.render("Trojaner", True, py.Color("white"))
+    screen.blit(text, (0, 0))
 
 
     imp = py.image.load(path + d + ".jpg").convert()
