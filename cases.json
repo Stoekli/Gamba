@@ -2,7 +2,7 @@
   "cases": {
     "Homeless case": {
       "blue": {
-        "Sy_Viet" : "blue",
+        "Sy Viet" : "blue",
         "Hobo" : "blue",
         "Brick" : "blue",
         "Trojaner" : "blue",
@@ -11,16 +11,16 @@
       "purple": {
         "Vergaser" : "purple",
         "V-Bucks" : "purple",
-        "Bumblebee_bottle" : "purple",
-        "Metal_plate" : "purple"
+        "Bumblebee bottle" : "purple",
+        "Metal plate" : "purple"
       } ,
       "pink": {
         "Kerosene" : "pink",
-        "Yankee_with_no_brim" : "pink",
+        "Yankee with no brim" : "pink",
         "Robux" : "pink"
       } ,
       "red": {
-        "Diesel_Generator" : "red",
+        "Diesel Generator" : "red",
         "Uranium" : "red"
 
       } ,

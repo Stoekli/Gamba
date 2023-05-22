@@ -1,4 +1,6 @@
 import json
+
+import pygame
 import pygame as py
 import numpy as np
 
@@ -25,8 +27,8 @@ def gen_case():
 screen_width = 1280
 screen_height = 720
 
-rec_width = screen_width/2
-rec_height = screen_width/2
+rec_width = screen_width/4
+rec_height = screen_width/4
 
 rec_pos_x = screen_width/2 - rec_width/2
 rec_pos_y = screen_height/2 - rec_height/2
@@ -41,13 +43,21 @@ r, d = gen_case()
 
 path = "./images/"
 
-font = py.font.Font('./font/Roboto-Regular.ttf', 64)
+
+font = py.font.Font('./font/Roboto-Regular.ttf', 48)
+
 
 
 while running:
 
-    text = font.render("Trojaner", True, py.Color("white"))
-    screen.blit(text, (0, 0))
+    screen.fill((0,0,0))
+
+    text = font.render(d, True, py.Color("white"))
+
+    textRect = text.get_rect()
+
+    textRect.center = (screen_width // 2, screen_height // 2 + screen_height /3.5)
+    screen.blit(text, textRect )
 
 
     imp = py.image.load(path + d + ".jpg").convert()
@@ -67,5 +77,6 @@ while running:
                 r, d = gen_case()
             if event.key == py.K_ESCAPE:
                 running = False
+
 
     py.display.flip()
