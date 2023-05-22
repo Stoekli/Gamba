@@ -20,7 +20,7 @@ def gen_case():
 
     return r, d
 
-screen_width = 1200505050
+screen_width = 1200
 screen_height =720
 
 rec_width = screen_width/2
